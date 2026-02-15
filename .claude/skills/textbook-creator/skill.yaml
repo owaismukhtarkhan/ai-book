@@ -1,0 +1,5 @@
+name: textbook-creator
+shortDescription: Skill for creating educational textbooks with proper pedagogical structure, accessibility considerations, and subject-specific content.
+domain: Educational Content
+skillType: Builder
+version: 1.0.0
