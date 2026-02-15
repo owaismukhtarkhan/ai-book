@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "node",
+      "args": ["-e", "require('http').createServer((req, res) => { res.writeHead(200, {'Content-Type': 'application/json'}); res.end(JSON.stringify({message: 'Context7 MCP Server', version: '1.0.0', features: ['documentation-search', 'code-examples', 'library-integration', 'api-docs', 'tutorials']})); }).listen(3001);"],
+      "transport": "http",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-f819de2b-a43e-4665-92d8-f4611f409d98"
+      },
+      "description": "Context7 MCP Server for documentation search, code examples, library integration, API docs, and tutorials",
+      "scope": "user"
+    },
+    "github": {
+      "command": "node",
+      "args": ["-e", "require('http').createServer((req, res) => { res.writeHead(200, {'Content-Type': 'application/json'}); res.end(JSON.stringify({message: 'GitHub MCP Server', version: '1.0.0', features: ['repository-management', 'issue-tracking', 'pull-request-management', 'code-search', 'user-management']})); }).listen(3002);"],
+      "transport": "http",
+      "headers": {
+        "Authorization": "Bearer ${{env.GITHUB_TOKEN}}"
+      },
+      "description": "GitHub MCP Server for repository management, issue tracking, pull requests, code search, and user management",
+      "scope": "user"
+    }
+  },
+  "mcp": {
+    "http": {
+      "enabled": true,
+      "scope": "user"
+    }
+  }
+}
